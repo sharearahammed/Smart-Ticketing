@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart-Ticketing</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        .raleway-uniquifier {
+            font-family: "Raleway", sans-serif;
+            font-optical-sizing: auto;
+        }
+        .backgoround{
+            background-image: url('./images/banner.png');
+        }
+    </style>
+</head>
+
+<body class="raleway-uniquifier">
+
+    <header class="lg:mx-[133px]">
+        <div class="navbar bg-base-100 flex justify-between">
+            <div class="lg:navbar-start">
+              <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <li><a>Home</a></li>
+                    <li><a>About</a></li>
+                    <li><a>Destination</a></li>
+                    <li><a>Search</a></li>
+                </ul>
+              </div>
+              <a class="font-extrabold lg:text-3xl justify-end">P-Ticket</a>
+            </div>
+            <div class="lg:navbar-center hidden lg:flex">
+              <ul class="menu menu-horizontal px-1 text-xl text-[#030712B3] text-left">
+                <li><a>Home</a></li>
+                <li><a>About</a></li>
+                <li><a>Destination</a></li>
+                <li><a>Search</a></li>
+              </ul>
+            </div>
+            <div class="lg:navbar-end">
+              <a class="btn text-[#1DD100] border-[#1DD100]">Bus <img src="images/bus-icon.png" alt=""></a>
+            </div>
+          </div>
+    </header>
+
+    <main class="lg:mx-[133px]">
+        <section class="backgoround bg-no-repeat h-max-[500px] w-max-[310px] lg:h-[550px] lg:w-full flex flex-col justify-center items-center mt">
+            <!-- banner -->
+            <div class="text-center ">
+                <div>
+                    <h1 class="text-[#FFFFFF] lg:text-6xl text-2xl font-extrabold">End-t0-End Travel with <br> <span class="text-[#1DD100]">P Paribahan</span>
+                    </h1>
+                </div>
+                <div class="mt-[32px]">
+                    <p class="text-[#FFFFFF] text-[18px]">Yes, you can run unit tests and view the results directly within the app. The <br> integrated testing features allow for a streamlined .</p>
+                </div>
+                <div class="mt-[32px]">
+                    <a href="#footer"><button class="btn bg-[#1DD100] border-[#1DD100]">Buy Tickets</button></a>
+                    
+                </div>
+            </div>
+        </section>
+
+        <section class=" mt-10 lg:mt-[120px]">
+            <h1 class="text-center lg:text-3xl font-extrabold mb-5 lg:mb-[48px]">Best offers for you</h1>
+            <div class="flex flex-col lg:flex-row justify-between items-center">
+                <div class="bg-[#FFBF0F] flex justify-between items-center p-5 lg:p-10  lg:h-[220px] lg:w-[573px] rounded-lg">
+                    <div class="flex flex-col justify-center ">
+                        <h1 class="text-[#030712CC] lg:text-4xl font-extrabold">15% OFF</h1>
+                        <p class="text-[#030712CC] font-extrabold">on your next purchase</p>
+                        <p class="text-[#03071280]">use by January 2024</p>
+                    </div>
+                    
+                    <div class="flex flex-col justify-center items-center">
+                        <h1 class="lg:text-3xl font-extrabold">NEW<sub>15</sub></h1>
+                        <p class="text-[#03071280]">Coupon Code</p>
+                    </div>
+                </div>
+
+                <div class="bg-[#F78C9C] flex justify-between items-center p-5 lg:p-10  lg:h-[220px] lg:w-[573px] rounded-lg">
+                    <div class="flex flex-col justify-center ">
+                        <h1 class="text-[#030712CC] lg:text-4xl font-extrabold">20% OFF</h1>
+                        <p class="text-[#030712CC] font-extrabold">on your next purchase</p>
+                        <p class="text-[#03071280]">use by January 2024</p>
+                    </div>
+                    
+                    <div class="flex flex-col justify-center items-center">
+                        <h1 class="lg:text-3xl font-extrabold">Couple<sub>20</sub></h1>
+                        <p class="text-[#03071280]">Coupon Code</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center items-center">
+                <button class="mt-5 lg:mt-[62px] text-center btn border-[#1DD100] text-[#1DD100]">See All Offers</button>
+            </div>
+        </section>
+
+        <section class="border-1 border-[#1DD100] rounded-lg">
+            <h1>P.H Paribahan</h1>
+            <p>Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
+        </section>
+    </main>
+
+    <footer id="footer" class="bg-[#030712] text-[#FFFFFF] p-5 lg:p-[120px]">
+        <div class="flex justify-between">
+            <div>
+                <h1 class="text-3xl font-extrabold mb-2">P-Ticket</h1>
+                <p>P-Ticket is a digital platform to make your <br> daily commuting better.</p>
+            </div>
+            <div>
+                <p class="mb-2">Download our app</p>
+
+                <div class="flex justify-between
+                border-2 border-white rounded-md lg:p-2 lg:h-[56px] lg:w-[189px]">
+                    <div>
+                        <img src="images/playstore.png" alt="">
+                    </div>
+                    <div>
+                        <p>GET On</p>
+                        <h3>Google Play</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="mt-5 mb-5 lg:mt-[48px] lg:mb-[30px]">
+        <div class="flex justify-between">
+            <div>
+                <p>@all rights reserved, P-Ticket services limited.2024</p>
+            </div>
+            <div class="flex flex-col lg:flex-row lg:gap-8">
+                <p>Terms & condition</p>
+                <p>Return & refund policy</p>
+                <p>Privacy policy</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
