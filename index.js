@@ -23,13 +23,13 @@ for (let i = 0; i < buttons.length; i++) {
 
             const totalSeat = getElementByIdtoNumber('totalSeat');
             let Total = totalSeat - 1;
-            console.log(Total);
+            // console.log(Total);
             document.getElementById('totalSeat').innerText = Total;
 
             const seat = getElementByIdtoNumber('seat');
             seatCount = seat + 1;
             document.getElementById('seat').innerText = seatCount;
-            console.log(seatCount);
+            // console.log(seatCount);
 
             const list = document.getElementById('list');
 
@@ -52,16 +52,16 @@ for (let i = 0; i < buttons.length; i++) {
 
             const perTicketCostText = c.innerText;
             const perTicketCost = parseInt(perTicketCostText);
-            console.log(perTicketCost);
+            // console.log(perTicketCost);
 
             total += perTicketCost;
-            console.log(total);
+            // console.log(total);
             document.getElementById('totalPrice').innerText = total;
 
             const grandTotalPriceElement = document.getElementById('grandTotalPrice');
             const grandTotalPriceText = grandTotalPriceElement.innerText;
             grandTotalPriceElement.innerText = total;
-            console.log(grandTotalPriceText);
+            // console.log(grandTotalPriceText);
             button.removeEventListener('click', show);
         }
         else {
@@ -78,8 +78,9 @@ const applyBtn = document.getElementById('apply-btn');
 applyBtn.addEventListener('click', function () {
 
     const inputField = document.getElementById('input-field').value;
+    const cuponCode = inputField.split(' ').join('').toUpperCase();
     if (total >= 550) {
-        if (inputField === 'New 15') {
+        if (cuponCode === 'NEW15') {
             const discountElement = document.getElementById('grandTotalPrice');
             const discount = total * 0.15;
 
@@ -90,7 +91,7 @@ applyBtn.addEventListener('click', function () {
             cupponField.style.display = "none";
 
         }
-        else if (inputField === 'Couple 20' && total >= 1100) {
+        else if (cuponCode === 'COUPLE20' && total >= 1100) {
             const discountElement = document.getElementById('grandTotalPrice');
             const discount = total * 0.20;
 
@@ -111,11 +112,11 @@ applyBtn.addEventListener('click', function () {
 })
 
 function next() {
-    // hide everything show only the playground
+    
     const passengerName = document.getElementById('passengerName').value;
     const phoneNumberElement = document.getElementById('phoneNumber').value;
     const phoneNumber = parseInt(phoneNumberElement);
-    console.log(phoneNumber);
+    // console.log(phoneNumber);
 
     const emailAddress = document.getElementById('emailAddress').value;
     if (typeof phoneNumber === 'number' && !isNaN(phoneNumber) ) {
@@ -131,7 +132,7 @@ function next() {
 }
 
 function cotinue() {
-    // hide everything show only the playground
+
     hideElementById('sucessMessage');
     showElementById('header');
     showElementById('main');
