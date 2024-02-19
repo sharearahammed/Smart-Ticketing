@@ -15,6 +15,10 @@ function setBackgroundColorById(elementId){
     const element = document.getElementById(elementId);
     element.classList.add('bg-[#1DD100]');
 }
+function setBackgroundColorByIdAndColor(elementId,color){
+    const element = document.getElementById(elementId);
+    element.classList.add(color);
+}
 
 function removeBackgroundColorById(elementId){
     const element = document.getElementById(elementId);

@@ -14,7 +14,16 @@ for (let i = 0; i < buttons.length; i++) {
 
 
     function show() {
-        clickCount++
+        clickCount++;
+        if (clickCount == 0) {
+            setBackgroundColorByIdAndColor('nextButton', 'bg-gray-500');
+        }
+        else {
+            setBackgroundColorByIdAndColor('nextButton', 'bg-green-600');
+        }
+
+        //clickCount == 0 ? setBackgroundColorByIdAndColor('nextButton','bg-gray-500'):setBackgroundColorByIdAndColor('nextButton','bg-green-500');
+
         if (clickCount < 5) {
             console.log('clicked');
 
@@ -63,9 +72,9 @@ for (let i = 0; i < buttons.length; i++) {
             grandTotalPriceElement.innerText = total;
             // console.log(grandTotalPriceText);
             button.removeEventListener('click', show);
+
         }
         else {
-            clickCount = 4
             alert('Maximum number of seats per person have been booked!')
         }
 
@@ -112,23 +121,29 @@ applyBtn.addEventListener('click', function () {
 })
 
 function next() {
-    
-    const passengerName = document.getElementById('passengerName').value;
-    const phoneNumberElement = document.getElementById('phoneNumber').value;
-    const phoneNumber = parseInt(phoneNumberElement);
-    // console.log(phoneNumber);
 
-    const emailAddress = document.getElementById('emailAddress').value;
-    if (typeof phoneNumber === 'number' && !isNaN(phoneNumber) ) {
-        hideElementById('header');
-        hideElementById('main');
-        showElementById('sucessMessage');
-        console.log(phoneNumber)
+    if (clickCount > 0) {
+        const passengerName = document.getElementById('passengerName').value;
+        const phoneNumberElement = document.getElementById('phoneNumber').value;
+        const phoneNumber = parseInt(phoneNumberElement);
+        // console.log(phoneNumber);
+
+        const emailAddress = document.getElementById('emailAddress').value;
+        if (typeof phoneNumber === 'number' && !isNaN(phoneNumber)) {
+            hideElementById('header');
+            hideElementById('main');
+            showElementById('sucessMessage');
+            console.log(phoneNumber)
+        }
+        else {
+            alert('Phone number must be a number!')
+        }
+        document.getElementById('phoneNumber').value = '';
     }
     else{
-        alert('Phone number must be a number!')
+        alert('Please select at least one seat!')
     }
-    document.getElementById('phoneNumber').value = '';
+
 }
 
 function cotinue() {
