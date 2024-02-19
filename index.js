@@ -140,9 +140,7 @@ function next() {
         }
         document.getElementById('phoneNumber').value = '';
     }
-    else{
-        alert('Please select at least one seat!')
-    }
+    
 
 }
 
