@@ -140,7 +140,6 @@ function next() {
         }
         document.getElementById('phoneNumber').value = '';
     }
-    
 
 }
 
